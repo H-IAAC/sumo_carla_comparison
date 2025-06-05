@@ -12,8 +12,15 @@ See more projects from the group [here](https://github.com/brgsil/RepoOrganizer)
 ## Repository Structure
 > Lista e descrição das pastas e arquivos importantes na raiz do repositório
 
-- \<pasta>: \<descrição>
-
+- **!Carla_generator**: Folder containing the notebook and the map necessary to run the simulation and generate the data.
+- **!Sumo_generator**: Folder containing the notebook and the SUMO files necessary to run the simulation and generate the data.
+- **UAH-DRIVESET-v1**: Folder containing the data from the UAH-Driveset.
+- **data_experiment1_carla_100Hz**: Folder containing the data from both normal and aggressive drivers generate by CARLA in 100Hz.
+- **data_experiment1_sumo_100Hz**: Folder containing the data from both normal and aggressive drivers generate by SUMO in 100Hz.
+- **plots**: Folder containing plots and images to support the comparison.
+- **custom_libs**: Updated networks file that must overwrite the one at `~/miniconda3/envs/carla-env/lib/python3.8/site-packages/agents/scripts/networks.py`.
+- **envs**: Folder containing the `.yml` files to create the conda environments necessary to run the SUMO and CARLA simulations. Optional.
+- **experiment1.ipynb**: Notebook to make the comparisons.
 
 ## Dependencies / Requirements
 
@@ -21,22 +28,70 @@ See more projects from the group [here](https://github.com/brgsil/RepoOrganizer)
 > ncessárias para execução do projeto antes de se clonar o repositório, assim como possíveis
 > requesitos mínimos para o projeto (processador, gpu, compilador, etc).
 
+To run the experiments with the already generated data, one should simply install the packages under `requirements.txt` via `pip install -r requirements.txt`. 
+
+If you wish to run the simulations and make changes to them, the conda environments to run the scripts are provided in the repository. Since the dependencies are different for each simulator, it is important to use the correct environment.
+
+### (Optional) SUMO Installation and Environment:
+To create the environment run `conda env create -f sumo-env.yml` inside the `/envs` folder.
+
+The full instalation guide can be found at the [SUMO Installation Guide](https://sumo.dlr.de/docs/Installing/index.html).
+
+### (Optional) CARLA Installation and Environment:
+To create the environment run `conda env create -f sumo-env.yml` inside the `/envs` folder. 
+
+**IMPORTANT**: CARLA agents are used to simulate driver behaviors, but there are steps required to make them work properly in case one desires to have the exact same results, since changes to their parameters had to be made. More on this can be found at the **Installation / Usage** section.
+
+The full instalation guide can be found at the [CARLA Installation Guide](https://carla.readthedocs.io/en/latest/start_quickstart/#carla-installation)
+
+
 ## Installation / Usage
 
 > Passo-a-passo para execução do projeto localmente, assim como parâmetros de configuração
 > aceitos (por exemplo, como trocar o caminho para o arquivo de entrada ou saída). No caso de 
 > bibliotecas/API fornecer o link para a documentação do mesmo se disponível.
 
+### Experiment1.ipynb
+
+This is the main file for the comparisons. In it, it is possible to provide the path of SUMO and CARLA data and define which of the drivers in the UAH-Driveset are going to be used for comparison.
+
+The script also generates histograms, umaps and raw data plots, as well as the KL-divergence between the histograms for the simulators and the real data.
+
+### !Sumo_generator
+
+This folder allows the customization of the simulation and trajectories and behaviors of the vehicles simulated in SUMO by making changes to `experiment1_runner.ipynb`.
+
+The notebook allows for the customizatio of several driving parameters, start and end edges of the simulation, and provides the code to run and save the data generated, as well as all the intermediate files used by SUMO.
+
+### !Carla_generator
+
+This folder allows the customization of sensor parameters, behavior parameters, simulation parameters by making changes to `experiment1_runner.ipynb`.
+
+CARLA agents are used o simulate driver behaviors, but one of the files used inside the agents scripts is outdated and must be correct. The code provided by CARLA is using an old version of TensorFlow with deprecated functions. 
+The custom file updated to run the experiment can be found at `custom_libs/networks.py` and it should replace the file with the same name under `~/miniconda3/envs/carla-env/lib/python3.8/site-packages/agents/scripts`.
+
+The results collected for this experiment made changes to how the agens parameters in CARLA to achieve a fair comparison and those changes had to me make directly to the source code. This makes the process more manual, but it is still simple. 
+
+The first change is made to `/opt/carla-simulator/PythonAPI/carla/agents/navigation/behavior_types.py` (the `opt/carla-simulator`folder is created after installing CARLA), where the parameters for each vehicle class are defined. In it we changed the values of `max_speed`and `speed_lim_dist` for the normal and aggressive drivers. The new version can be found in the repo at `custom_libs/behavior_types.py`.
+
+Next we have to create a custom agent to override the `update_information` function inside the agent, since it was getting incorrect maximum speeds from the roads, keeping the vehicle stuck at a 40 km/h speed. The code for the custom agent is provided at `custom_libs/custom_agent.py` and must be pasted inside the `/opt/carla-simulator/PythonAPI/carla/agents/navigation` folder.
+
+Now, one should be able to run the simulation correctly and make changes to the parameters as desired.
+
 ## Citation
 
 > Quando existente, fornecer o Bibtex para citação do(s) artigo(s) publicados referentes ao
 > desenvolvimento desse projeto.
 
+**Waiting for publication**
+
 ## Authors
 
 > Lista ordenada por data das pessoas que desenvolveram algo neste repositório 
-  
-- (\<ano início>-\<ano fim>) \<Nome>: \<degree>, \<instituição>
+
+
+- 2024-2025 Renan Matheus S. Florencio: Computer Engineering, State University of Campinas (Unicamp)
+- 2024-2025 Paula Dornhofer P. Costa: Professor at School of Electrical and Computer Engineering, State University of Campinas (Unicamp)
   
 ## Acknowledgements
 
