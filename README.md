@@ -41,23 +41,19 @@ The full instalation guide can be found at the [CARLA Installation Guide](https:
 
 ## Installation / Usage
 
-> Passo-a-passo para execução do projeto localmente, assim como parâmetros de configuração
-> aceitos (por exemplo, como trocar o caminho para o arquivo de entrada ou saída). No caso de 
-> bibliotecas/API fornecer o link para a documentação do mesmo se disponível.
-
-### Experiment1.ipynb
+### `experiment1.ipynb`
 
 This is the main file for the comparisons. In it, it is possible to provide the path of SUMO and CARLA data and define which of the drivers in the UAH-Driveset are going to be used for comparison.
 
 The script also generates histograms, umaps and raw data plots, as well as the KL-divergence between the histograms for the simulators and the real data.
 
-### !Sumo_generator
+### `!Sumo_generator`
 
 This folder allows the customization of the simulation and trajectories and behaviors of the vehicles simulated in SUMO by making changes to `experiment1_runner.ipynb`.
 
 The notebook allows for the customizatio of several driving parameters, start and end edges of the simulation, and provides the code to run and save the data generated, as well as all the intermediate files used by SUMO.
 
-### !Carla_generator
+### `!Carla_generator`
 
 This folder allows the customization of sensor parameters, behavior parameters, simulation parameters by making changes to `experiment1_runner.ipynb`.
 
