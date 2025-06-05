@@ -37,7 +37,7 @@ To create the environment run `conda env create -f sumo-env.yml` inside the `/en
 
 **IMPORTANT**: CARLA agents are used to simulate driver behaviors, but there are steps required to make them work properly in case one desires to have the exact same results, since changes to their parameters had to be made. More on this can be found at the **Installation / Usage** section.
 
-The full instalation guide can be found at the [CARLA Installation Guide](https://carla.readthedocs.io/en/latest/start_quickstart/#carla-installation)
+The full instalation guide can be found at the [CARLA Installation Guide](https://carla.readthedocs.io/en/latest/start_quickstart/#carla-installation).
 
 ## Installation / Usage
 
