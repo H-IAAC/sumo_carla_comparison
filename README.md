@@ -1,6 +1,6 @@
-# `<Project-Name>`
+# `<Comparative Analysis of Synthetic Inertial Data Quality from CARLA and SUMO Driving Simulators>`
 
-> Descrição do projeto, objetivos e intenções de uso
+CARLA and SUMO are widely adopted open-source simulators in autonomous driving and intelligent transportation systems (ITS). While neither was initially designed to generate high-fidelity inertial data such as that from an Inertial Measurement Unit (IMU), both have been employed in diverse research contexts—including visual-inertial SLAM, motion planning, and navigation under adverse conditions—where inertial data plays a critical role. In this study, we evaluate the quality of inertial data produced by CARLA and SUMO through a direct comparison with the naturalistic UAH-DriveSet dataset, which contains IMU data across various real-world driving behaviors. Despite SUMO's lack of a built-in physics engine for detailed inertial simulation, our analysis reveals that it performs better in qualitative and quantitative assessments. To our knowledge, this is the first systematic comparison of its kind, and it highlights important limitations in current simulation tools, offering valuable insights for researchers relying on simulated inertial data in autonomy-related studies.
 
 This project was developed as part of the Cognitive Architectures research line from 
 the Hub for Artificial Intelligence and Cognitive Architectures (H.IAAC) of the State University of Campinas (UNICAMP).
