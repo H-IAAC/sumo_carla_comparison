@@ -11,8 +11,8 @@ See more projects from the group [here](https://github.com/brgsil/RepoOrganizer)
 
 ## Repository Structure
 
-- **!Carla_generator**: Folder containing the notebook and the map necessary to run the simulation and generate the data.
-- **!Sumo_generator**: Folder containing the notebook and the SUMO files necessary to run the simulation and generate the data.
+- **CARLA_generator**: Folder containing the notebook and the map necessary to run the simulation and generate the data.
+- **SUMO_generator**: Folder containing the notebook and the SUMO files necessary to run the simulation and generate the data.
 - **UAH-DRIVESET-v1**: Folder containing the data from the UAH-Driveset.
 - **data_experiment1_carla_100Hz**: Folder containing the data from both normal and aggressive drivers generate by CARLA in 100Hz.
 - **data_experiment1_sumo_100Hz**: Folder containing the data from both normal and aggressive drivers generate by SUMO in 100Hz.
