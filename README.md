@@ -47,13 +47,13 @@ This is the main file for the comparisons. In it, it is possible to provide the 
 
 The script also generates histograms, umaps and raw data plots, as well as the KL-divergence between the histograms for the simulators and the real data.
 
-### `!Sumo_generator`
+### `SUMO_generator`
 
 This folder allows the customization of the simulation and trajectories and behaviors of the vehicles simulated in SUMO by making changes to `experiment1_runner.ipynb`.
 
 The notebook allows for the customizatio of several driving parameters, start and end edges of the simulation, and provides the code to run and save the data generated, as well as all the intermediate files used by SUMO.
 
-### `!Carla_generator`
+### `CARLA_generator`
 
 This folder allows the customization of sensor parameters, behavior parameters, simulation parameters by making changes to `experiment1_runner.ipynb`.
 
