@@ -75,7 +75,7 @@ Now, one should be able to run the simulation correctly and make changes to the 
 ## Authors
 
 - 2024-2025 Renan Matheus S. Florencio: Computer Engineering, State University of Campinas (Unicamp)
-- 2024-2025 Paula Dornhofer P. Costa: Professor at School of Electrical and Computer Engineering, State University of Campinas (Unicamp)
+- (Adivsor, 2024-2025) Paula Dornhofer P. Costa: Professor at School of Electrical and Computer Engineering, State University of Campinas (Unicamp)
   
 ## Acknowledgements
 
