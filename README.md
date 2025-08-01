@@ -27,6 +27,10 @@ To run the experiments with the already generated data, one should simply instal
 
 If you wish to run the simulations and make changes to them, the conda environments to run the scripts are provided in the repository. Since the dependencies are different for each simulator, it is important to use the correct environment.
 
+### UAH-DriveSet
+
+We do not have the license to provide UAH-DriveSet in the repository. It must be downloaded from [this link](http://www.robesafe.uah.es/personal/eduardo.romera/uah-driveset/) and placed in the repository folder. After this, you should have a `UAH-DRIVESET-v1` folder in the root folder.
+
 ### (Optional) SUMO Installation and Environment:
 To create the environment run `conda env create -f sumo-env.yml` inside the `/envs` folder.
 
