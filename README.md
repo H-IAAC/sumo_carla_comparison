@@ -11,8 +11,8 @@ See more projects from the group [here](https://github.com/brgsil/RepoOrganizer)
 
 ## Repository Structure
 
-- **!Carla_generator**: Folder containing the notebook and the map necessary to run the simulation and generate the data.
-- **!Sumo_generator**: Folder containing the notebook and the SUMO files necessary to run the simulation and generate the data.
+- **CARLA_generator**: Folder containing the notebook and the map necessary to run the simulation and generate the data.
+- **SUMO_generator**: Folder containing the notebook and the SUMO files necessary to run the simulation and generate the data.
 - **UAH-DRIVESET-v1**: Folder containing the data from the UAH-Driveset.
 - **data_experiment1_carla_100Hz**: Folder containing the data from both normal and aggressive drivers generate by CARLA in 100Hz.
 - **data_experiment1_sumo_100Hz**: Folder containing the data from both normal and aggressive drivers generate by SUMO in 100Hz.
@@ -26,6 +26,10 @@ See more projects from the group [here](https://github.com/brgsil/RepoOrganizer)
 To run the experiments with the already generated data, one should simply install the packages under `requirements.txt` via `pip install -r requirements.txt`. 
 
 If you wish to run the simulations and make changes to them, the conda environments to run the scripts are provided in the repository. Since the dependencies are different for each simulator, it is important to use the correct environment.
+
+### UAH-DriveSet
+
+We do not have the license to provide UAH-DriveSet in the repository. It must be downloaded from [this link](http://www.robesafe.uah.es/personal/eduardo.romera/uah-driveset/) and placed in the repository folder. After this, you should have a `UAH-DRIVESET-v1` folder in the root folder.
 
 ### (Optional) SUMO Installation and Environment:
 To create the environment run `conda env create -f sumo-env.yml` inside the `/envs` folder.
@@ -47,13 +51,13 @@ This is the main file for the comparisons. In it, it is possible to provide the 
 
 The script also generates histograms, umaps and raw data plots, as well as the KL-divergence between the histograms for the simulators and the real data.
 
-### `!Sumo_generator`
+### `SUMO_generator`
 
 This folder allows the customization of the simulation and trajectories and behaviors of the vehicles simulated in SUMO by making changes to `experiment1_runner.ipynb`.
 
 The notebook allows for the customizatio of several driving parameters, start and end edges of the simulation, and provides the code to run and save the data generated, as well as all the intermediate files used by SUMO.
 
-### `!Carla_generator`
+### `CARLA_generator`
 
 This folder allows the customization of sensor parameters, behavior parameters, simulation parameters by making changes to `experiment1_runner.ipynb`.
 
@@ -75,7 +79,7 @@ Now, one should be able to run the simulation correctly and make changes to the 
 ## Authors
 
 - 2024-2025 Renan Matheus S. Florencio: Computer Engineering, State University of Campinas (Unicamp)
-- 2024-2025 Paula Dornhofer P. Costa: Professor at School of Electrical and Computer Engineering, State University of Campinas (Unicamp)
+- (Adivsor, 2024-2025) Paula Dornhofer P. Costa: Professor at School of Electrical and Computer Engineering, State University of Campinas (Unicamp)
   
 ## Acknowledgements
 
