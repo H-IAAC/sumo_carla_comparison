@@ -92,6 +92,4 @@ url = {https://github.com/H-IAAC/sumo_carla_comparison}
   
 ## Acknowledgements
 
-This project is part of the Hub for Artificial Intelligence and Cognitive Architectures
-(H.IAAC- Hub de Inteligência Artificial e Arquiteturas Cognitivas). We acknowledge the 
-support of PPI-Softex/MCTI by grant 01245.013778/2020-21 through the Brazilian Federal Government.
+Project supported by the brazilian Ministry of Science, Technology and Innovations, with resources from Law No. 8,248, of October 23, 1991.
