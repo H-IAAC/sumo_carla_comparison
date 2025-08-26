@@ -74,7 +74,16 @@ Now, one should be able to run the simulation correctly and make changes to the 
 
 ## Citation
 
-**Waiting for publication**
+<!--Don't remove the following tags, it's used for placing the generated citation from the CFF file-->
+<!--CITATION START-->
+```bibtext
+@software{my_citation,
+author = {da Silva Florencio, Renan Matheus and Dornhofer Paro Costa, Paula},
+title = {sumo_carla_comparison},
+url = {https://github.com/H-IAAC/sumo_carla_comparison}
+}
+```
+<!--CITATION END-->
 
 ## Authors
 
